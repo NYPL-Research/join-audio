@@ -2,16 +2,34 @@
 name = "join-audio"
 version = "0.1.0"
 description = "Audio joiner CLI tool"
+authors = ["Nick Krabbenhoeft <nickkrabbenhoeft@nypl.org>"]
 readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.scripts]
+join_parts = "src.main:main"
 
 [tool.poetry.dependencies]
 python = "^3.11"
 numpy = "^2.4.1"
 soundfile = "^0.13.1"
 scipy = "^1.17.0"
-click = "^8.3.1"
 
+
+[tool.poetry.group.dev.dependencies]
+nox = "^2025.11.12"
+pytest = "^9.0.2"
+black = "^25.12.0"
+isort = "^7.0.0"
+flake8 = "^7.3.0"
+mypy = "^1.10.0"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+ignore_missing_imports = true
