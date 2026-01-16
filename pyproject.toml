@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "join-audio"
+version = "0.1.0"
+description = "Audio joiner CLI tool"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+numpy = "^2.4.1"
+soundfile = "^0.13.1"
+scipy = "^1.17.0"
+click = "^8.3.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
